@@ -7,6 +7,8 @@
     --CLOUD: #F4F4FD;
     --CORNFLOWER: #E7E9FC;
     --OCEAN: #404bbf;
+    --DAIRY: #FCFCFC;
+
 }
 
 body {
@@ -217,13 +219,48 @@ body {
 }
 
 .backdrop {
-    width: 100%;
+    width: 1158px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--NAVY-BLUE);
+    background-color: rgba(46, 47, 66, 0.40);
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.modal {
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+    background: var(--DAIRY);
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    padding: 24px;
+}
+
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal-close-btn {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--CORNFLOWER);
+    width: 30px;
+    height: 30px;
+    color: var(--NAVY-BLUE);
+    margin-left: auto;
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    
 }
 
 /* end of hero section styling---------------- */
